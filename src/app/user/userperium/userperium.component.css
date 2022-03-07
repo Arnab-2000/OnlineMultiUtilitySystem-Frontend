@@ -1,0 +1,17 @@
+h5,a{
+    color: white;
+}
+nav{
+    background-color:rgb(151, 32, 151);
+}
+#monthly
+{
+    text-decoration: underline;
+}
+.style
+{
+    position: absolute;
+    right: 10px;
+    color: black;
+    
+}
