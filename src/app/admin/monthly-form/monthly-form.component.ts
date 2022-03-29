@@ -30,7 +30,7 @@ export class MonthlyFormComponent implements OnInit {
   }
   goToMonthly()
   {
-    this.router.navigate(['/monthly']);
+    this.router.navigate(['/admin/monthly']);
   }
 
 }

@@ -11,53 +11,23 @@ import { Addons } from 'src/app/addons';
 export class UseraddonsComponent implements OnInit {
 
   addons:Addons[];
-  addon=new Addons();
-  addonupdate:any ={
-    addonId:"",
-    addonName:"",
-    addonType:"",
-    addonPrice:"",
-    addonDetails:"",
-    addonValidity:""
-}
-  constructor(private service:AddonService,private router:Router) { }
+
+  constructor(private service:AddonService) { }
 
   ngOnInit(): void {
+   
+  
+  this.getaddon();
   }
-  Listaddon()
+  getaddon()
   {
-    this.service.FetchAddonFormFromRemote().subscribe((data)=>
+    this.service.FetchAddonFormFromRemote().subscribe(data=>
       {
-        console.log("Response received");
-        this.addons=data;
+          this.addons=data;
       });
   }
-  delete(Addon:any)
-  {
-    this.service.deleteByid(Addon.addonId).subscribe(
-      (data)=>
-      {
-          console.log("Succesfully deleted");
-          this.Listaddon();
-      })
-  }
-  displayStyle = "none";
-  
-  openPopup(Addon:any) {
-    this.displayStyle = "block";
-    this.addonupdate=Addon;
-  }
-  close()
-  {
-    this.displayStyle = "none";
-  }
-  register()
-  {
-    this.service.update(this.addonupdate).subscribe(data=>
-      {
-        console.log(data);
-        
-      })
-  }
+ 
 
+  
+  
 }

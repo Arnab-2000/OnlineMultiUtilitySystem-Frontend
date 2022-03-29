@@ -9,8 +9,6 @@ import { Addons } from 'src/app/addons';
   styleUrls: ['./addon-form.component.css']
 })
 export class AddonFormComponent implements OnInit {
-
-  
   addon: Addons=new Addons();
   constructor(private service:AddonService,private router:Router) { }
 
@@ -25,17 +23,14 @@ export class AddonFormComponent implements OnInit {
   {
     this.service.addonlist(this.addon).subscribe(data=>
       {
-         
+          
           this.goToaddon();
-      
       })
   }
   goToaddon()
   {
-    this.router.navigate(['/addon']);
+    this.router.navigate(['/admin/addon']);
     
   }
- 
-
 
 }

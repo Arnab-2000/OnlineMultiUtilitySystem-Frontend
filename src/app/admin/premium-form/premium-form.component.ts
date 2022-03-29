@@ -31,7 +31,7 @@ export class PremiumFormComponent implements OnInit {
   }
   goToPremium()
   {
-    this.router.navigate(['/premium']);
+    this.router.navigate(['/admin/premium']);
   }
 
 }

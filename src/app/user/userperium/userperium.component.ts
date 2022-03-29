@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Plan } from 'src/app/plan';
 import { PlanService } from 'src/app/plan.service';
 
 @Component({
@@ -8,11 +9,23 @@ import { PlanService } from 'src/app/plan.service';
 })
 export class UserperiumComponent implements OnInit {
 
-  constructor() { }
+  plan:Plan[];
 
+
+  constructor(private service:PlanService) { }
 
   ngOnInit(): void {
+   
+  this.getpremium();
   }
+  getpremium()
+  {
+    this.service.FetchAddonFormFromRemote().subscribe(data=>
+      {
+          this.plan=data;
+      });
+  }
+ 
  
 
 }

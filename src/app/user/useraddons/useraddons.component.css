@@ -36,3 +36,9 @@ p{
     height: 30px;
     
 }
+#grid
+{
+    border-radius: 30px;
+    border-left:6px solid rgb(33, 30, 212);
+
+}

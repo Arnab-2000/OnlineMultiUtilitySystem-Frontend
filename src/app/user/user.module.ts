@@ -6,6 +6,10 @@ import { UsermonthlyComponent } from './usermonthly/usermonthly.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { RechargeComponent } from './recharge/recharge.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ReviewComponent } from './review/review.component';
+import { ReviewFormComponent } from './review-form/review-form.component';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -15,7 +19,12 @@ import { RechargeComponent } from './recharge/recharge.component';
     UseraddonsComponent,
        UserperiumComponent,
        UsermonthlyComponent,
-       RechargeComponent
+       RechargeComponent,
+       NotificationComponent,
+       ReviewComponent,
+       ReviewFormComponent,
+       DetailsComponent,
+
   ],
   imports: [
     CommonModule,
